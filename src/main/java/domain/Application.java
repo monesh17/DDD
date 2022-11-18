@@ -2,8 +2,9 @@ package main.java.domain;
 
 import main.java.domain.cart.Cart;
 import main.java.domain.cart.Item;
-import main.java.domain.cart.RemovedProducts;
 import main.java.domain.product.Product;
+
+import java.util.UUID;
 
 public class Application
 {
@@ -19,12 +20,20 @@ public class Application
     cart.addItem(sonyWirelessHeadphone);
     cart.removeItem(applePencil);
     System.out.println(cart.getItems().size());
-    System.out.println(RemovedProducts.getProductNames().size());
+    System.out.println(cart.getRemovedItems().size());
+    
+    Cart cart1 = application.createCart();
+    cart1.addItem(new Item(new Product("Apple Pencil"), 2));
+    Cart cart2 = application.createCart();
+    cart2.addItem(new Item(new Product("Apple Pencil"), 2));
+    
+    System.out.println(cart1.equals(cart2));
+    
   }
   
   private Cart createCart ()
   {
-    this.cart = new Cart();
+    this.cart = new Cart(UUID.randomUUID().getMostSignificantBits());
     return this.cart;
   }
 }

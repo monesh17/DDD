@@ -1,6 +1,7 @@
 package main.java.domain;
 
 import main.java.domain.cart.Cart;
+import main.java.domain.cart.Item;
 import main.java.domain.product.Product;
 
 public class Application
@@ -11,8 +12,8 @@ public class Application
   {
     Application application = new Application();
     Cart cart=application.createCart();
-    cart.addProduct(new Product("Apple Pencil"));
-    cart.addProduct(new Product("Sony Wireless headphone"));
+    cart.addItem(new Item(new Product("Apple Pencil"), 2));
+    cart.addItem(new Item(new Product("Sony Wireless headphone"),1));
     
   }
   

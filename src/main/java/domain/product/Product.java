@@ -1,4 +1,4 @@
-package main.java.domain;
+package main.java.domain.product;
 
 public class Product
 {

@@ -2,6 +2,7 @@ package main.java.domain;
 
 import main.java.domain.cart.Cart;
 import main.java.domain.cart.Item;
+import main.java.domain.cart.RemovedProducts;
 import main.java.domain.product.Product;
 
 public class Application
@@ -18,6 +19,7 @@ public class Application
     cart.addItem(sonyWirelessHeadphone);
     cart.removeItem(applePencil);
     System.out.println(cart.getItems().size());
+    System.out.println(RemovedProducts.getProductNames().size());
   }
   
   private Cart createCart ()

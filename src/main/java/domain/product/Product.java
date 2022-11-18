@@ -1,14 +1,23 @@
 package main.java.domain.product;
 
+import java.util.Currency;
 import java.util.Objects;
 
 public class Product
 {
   String name;
   
-  public Product (String name)
+  Price price;
+  
+  public Product (String name, Price price)
   {
     this.name = name;
+    this.price = price;
+  }
+  
+  public void setPrice (Price price)
+  {
+    this.price = price;
   }
   
   public String getName ()

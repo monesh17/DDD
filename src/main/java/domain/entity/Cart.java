@@ -1,9 +1,8 @@
-package main.java.domain.cart;
+package main.java.domain.entity;
 
-import main.java.domain.product.Product;
+import main.java.domain.cart.Item;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 

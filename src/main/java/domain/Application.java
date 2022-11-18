@@ -17,7 +17,7 @@ public class Application
     Item sonyWirelessHeadphone = new Item(new Product("Sony Wireless headphone"), 1);
     cart.addItem(sonyWirelessHeadphone);
     cart.removeItem(applePencil);
-    
+    System.out.println(cart.getItems().size());
   }
   
   private Cart createCart ()

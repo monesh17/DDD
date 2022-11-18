@@ -3,6 +3,7 @@ package main.java.domain.cart;
 import main.java.domain.product.Product;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Cart
@@ -17,4 +18,8 @@ public class Cart
      itemList.remove(item);
   }
   
+  public List<Item> getItems ()
+  {
+    return itemList;
+  }
 }

@@ -12,8 +12,11 @@ public class Application
   {
     Application application = new Application();
     Cart cart=application.createCart();
-    cart.addItem(new Item(new Product("Apple Pencil"), 2));
-    cart.addItem(new Item(new Product("Sony Wireless headphone"),1));
+    Item applePencil = new Item(new Product("Apple Pencil"), 2);
+    cart.addItem(applePencil);
+    Item sonyWirelessHeadphone = new Item(new Product("Sony Wireless headphone"), 1);
+    cart.addItem(sonyWirelessHeadphone);
+    cart.removeItem(applePencil);
     
   }
   
